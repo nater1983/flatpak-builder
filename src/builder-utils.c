@@ -51,6 +51,10 @@ G_DEFINE_AUTO_CLEANUP_CLEAR_FUNC (yaml_parser_t, yaml_parser_delete)
 G_DEFINE_AUTO_CLEANUP_CLEAR_FUNC (yaml_document_t, yaml_document_delete)
 #endif
 
+#ifndef DEBUGEDIT
+#define DEBUGEDIT "eu-strip"  /* or "strip" if eu-strip isn’t installed */
+#endif
+
 char *
 builder_uri_to_filename (const char *uri)
 {
