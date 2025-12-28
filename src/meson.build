@@ -29,7 +29,6 @@ yaml_dep = dependency('yaml-0.1', required: get_option('yaml'))
 
 config_data = configuration_data()
 config_data.set('FLATPAK_BUILDER_ENABLE_YAML', yaml_dep.found())
-config_data.set_quoted('DEBUGEDIT', debugedit.full_path())
 config_data.set_quoted('GETTEXT_PACKAGE', meson.project_name())
 config_data.set_quoted('PACKAGE_VERSION', meson.project_version())
 config_data.set_quoted('PACKAGE_STRING', '@0@-@1@'.format(meson.project_name(), meson.project_version()))
